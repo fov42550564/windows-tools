@@ -1,0 +1,14 @@
+#!/bin/bash
+
+md5v1="318325373e931aeb78d3f089cf5ca7c9"
+cat piece/atom.* > atom.exe
+
+md5v2=`md5sum atom.exe`
+md5v2=${md5v2%% *}
+if ! [ "$md5v1" = "$md5v2" ];then
+  echo "$md5v1"
+  echo "$md5v2"
+  echo "check md5 error"
+else
+  echo "done"
+fi

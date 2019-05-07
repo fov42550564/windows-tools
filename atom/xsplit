@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm -fr piece
+mkdir piece
+split -b 30M -d ./AtomSetup-x64.exe piece/atom.
